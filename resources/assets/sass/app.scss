@@ -1,0 +1,221 @@
+/*
+*copilar usando esse comando abaixo
+*gulp --production
+*/
+
+/* materialize */
+@import "materialize";
+
+$espaco1: 20px;
+$espaco2: $espaco1/2;
+
+/* css personalizado */
+
+.corPrimaria{
+	@extend .light-blue;
+}
+
+
+
+
+
+
+
+header{
+	@extend .white-text;
+
+	nav ul a:hover{
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.dropdown-content li > a{
+		@extend .light-blue-text;
+	}
+
+	.notification-item{
+		height: 64px;
+		i{
+			display: inline-block;
+			margin-right: 3px;
+		}
+		span{
+			@extend .red.darken-1, .white-text;
+			position: absolute;
+			display: table;
+			width: auto;
+			height: auto;
+			line-height: initial;
+			border-radius: 5px;
+			right: 5px;
+			top: 4px;
+			padding: 2px 7px;
+		}
+	}
+
+	.button-collapse-left i{
+		height: 64px;
+		line-height: 64x;
+	}
+
+	i.icons-menu-principal{
+		display: inline-block;
+		vertical-align: middle;
+		height: 60px;
+		font-size: 1.6rem;
+	}
+	i.right{
+		margin-top: 4px;
+	}
+
+
+
+
+/* label color */
+.input-field label {
+ color: #fff;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #fff;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: none;
+ box-shadow: none
+}
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #fff;
+ box-shadow: none;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid red;
+ box-shadow: none;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #fff;
+}
+
+
+
+.procurar{
+
+	margin-left: $espaco2;
+	margin-right: $espaco1;
+
+	.input-field{
+		i{
+			display: inline-block;
+			cursor: pointer;
+		}
+		input{
+			display: inline-block;
+			width: 0px !important;
+			padding-left: 0px;
+			margin-left: 35px;
+ 			border-bottom: 1px solid #fff !important;
+
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			transition: all .5s;
+		}
+
+		input:-moz-placeholder {
+			color: #fff;
+		}
+
+		input::-webkit-input-placeholder {
+			color: #fff;
+		}
+	}
+	
+	:hover input{
+		width: 130px !important;
+	}
+
+}
+
+}
+
+#left-sidebar-menu{
+	top: 64px;
+	z-index: 1;
+	
+	* {
+		@extend .grey-text.text-darken-4;
+	}
+
+	i.icons-sidebar-left{
+		display: inline-block;
+		height: 37px;
+		padding-top: 5px;
+		vertical-align: middle;
+	}
+	i.icons-sub-sidebar-left{
+		margin-left: -4px;
+	}
+}
+
+#nav-mobile.sidebar-fixed-left{
+	left: 0 !important;
+}
+
+main, footer{
+	padding-left: 250px;
+}
+
+.header-area-1{
+
+	@extend .grey.lighten-4;
+	padding-bottom: $espaco1;
+	margin-bottom: $espaco1;
+
+	h4{
+		@extend .grey-text.text-darken-2;
+	}
+	h6{
+		@extend .grey-text.text-lighten-1;
+		margin-top: 5px;
+	}
+}
+ 
+.max-width-block {
+    max-width: 1400px;
+    width: 90%;
+    display: block;
+    margin: $espaco1 auto;
+    box-sizing: border-box;
+    > * {
+    	padding-left: $espaco1;
+    	padding-right: $espaco1;
+    }
+    > :first-child {
+    	padding-top: $espaco1;
+    }
+    > :last-child {
+    	padding-bottom: $espaco1;
+    }
+    
+
+}
+
+
+footer{
+	@extend .light-blue, .white-text;
+	.footer-copyright{
+		span{
+			@extend .white-text;
+		}
+		a{
+			@extend .white-text;
+			font-weight: 700;
+		}
+	}
+}
+
+
+/*** More variables not shown here.. ***/

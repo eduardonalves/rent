@@ -1,0 +1,1 @@
+gulp --production    /*serve para copilar o sass e javascript e mimificar os arquivos*/
